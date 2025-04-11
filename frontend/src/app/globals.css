@@ -6,6 +6,15 @@
 }
 
 
+.iti {
+  @apply shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-700 focus:border-green-700 focus:border block w-full p-2.5 outline-0;
+}
+
+.iti__tel-input {
+  @apply outline-0;
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -23,8 +32,6 @@
   }
 }
 
-
-body { 
+a.link {
+  @apply text-green-800 underline font-semibold
 }
-
-

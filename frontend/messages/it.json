@@ -1,0 +1,77 @@
+{
+    "Global": {
+      "hello_name": "Ciao, ",
+      "signin": "Accedi",
+      "my_order": "I Miei Ordini",
+      "cashback": "Cashback",
+      "my_account": "Il Mio Account",
+      "logout": "Esci",
+      "addresses": "Indirizzi",
+      "cart": "Carrello",
+      "create_account": "Crea Account",
+      "store": "Negozio",
+      "about": "Informazioni",
+      "save": "Salva",
+      "support": "Supporto",
+      "protected_message": "Accedi per visualizzare i prodotti del negozio!",
+      "recently_added": "Nuovi",
+      "best_sellers": "Più Venduti",
+      "total": "Cashback Totale",
+      "available_total": "Cashback Disponibile",
+      "level": "Livello di Cashback",
+      "invite_code": "Codice Invito",
+      "name": "Nome Completo",
+      "document": "Documento",
+      "birthdate": "Data di Nascita",
+      "email": "Email",
+      "phone": "Telefono",
+      "password": "Password",
+      "passwordConfirm": "Conferma Password",
+      "date": "Data",
+      "forgot_password": "Recupera Password",
+      "title_login": "Accedi",
+      "invite_code_copied": "Codice copiato!",
+      "name_placeholder": "Inserisci il tuo nome completo",
+      "document_placeholder": "Inserisci il tuo documento o ID",
+      "phone_placeholder": "Inserisci il tuo numero di telefono",
+      "birthdate_placeholder": "Inserisci la tua data di nascita (MM/GG/AAAA)",
+      "email_placeholder": "Inserisci il tuo indirizzo email",
+      "status": "Stato",
+      "password_placeholder": "Crea una password",
+      "passwordConfirm_placeholder": "Conferma la tua password",
+      "account_created_info": "Abbiamo inviato un link di conferma a {email}. Dopo aver confermato il tuo account, accedi.",
+      "account": {
+        "please_confirm_email": {
+          "title": "Account Creato!",
+          "message": "Abbiamo inviato un link di conferma a <email>email</email>. Dopo aver confermato il tuo account, accedi."
+        }
+      },
+      "errors": {
+        "EMAIL_ALREADY_REGISTERED": "Questa email è già registrata.",
+        "BAD_INVITE_CODE": "Il codice invito specificato non è valido."
+      },
+      "last_orders": {
+        "title": "Ultimi Ordini",
+        "items": "Articoli",
+        "value": "Valore",
+        "payment": "Pagamento",
+        "actions": "Azioni"
+      },
+      "cashback_history": {
+        "title": "Storico Cashback",
+        "event": "Evento"
+      },
+      "cashback_events": {
+        "NEW_USER_INVITED_0": "<name>name</name> si è registrato utilizzando il tuo link - Livello 1",
+        "NEW_USER_INVITED_1": "<name>name</name> si è registrato utilizzando un link di un invitato - Livello 2",
+        "NEW_USER_INVITED_2": "<name>name</name> si è registrato utilizzando un link di un invitato - Livello 3"
+      }
+    },
+    "RegisterPage": {
+      "title": "Crea Nuovo Account"
+    },
+    "LoginPage": {
+      "title": "Accedi"
+    }
+  }
+  

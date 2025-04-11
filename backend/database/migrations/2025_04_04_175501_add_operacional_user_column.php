@@ -13,6 +13,7 @@ return new class extends Migration
     {
         //
         Schema::table('users', function(Blueprint $table){
+            $table->date('birthdate');
             $table->string('phone', 50)->nullable();
             $table->string('document', 50)->nullable();
             $table->string('role', 30)->default('CUSTOMER');

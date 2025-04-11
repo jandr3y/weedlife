@@ -6,11 +6,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     const ROLE_ADMIN = 'ADMIN';
     const ROLE_CUSTOMER = 'CUSTOMER';
@@ -25,6 +27,7 @@ class User extends Authenticatable
         'phone',
         'invited_by',
         'invite_code',
+        'expire_at',
         'role',
         'email',
         'password',
@@ -40,6 +43,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function invited_by()
+    {
+        return $this->belongsTo(User::class, 'invited_by');
+    }
+
     /**
      * Get the attributes that should be cast.
      *
@@ -52,4 +60,29 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return [
+            "name" => $this->name,
+            "email" => $this->email,
+            "invite_code" => $this->invite_code
+        ];
+    }
+    
 }

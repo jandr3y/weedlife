@@ -1,0 +1,77 @@
+{
+    "Global": {
+      "hello_name": "Olá, ",
+      "signin": "Entrar",
+      "my_order": "Meus Pedidos",
+      "cashback": "Cashback",
+      "my_account": "Minha Conta",
+      "logout": "Sair",
+      "addresses": "Endereços",
+      "cart": "Carrinho",
+      "create_account": "Criar Conta",
+      "store": "Loja",
+      "about": "Sobre",
+      "save": "Salvar",
+      "support": "Suporte",
+      "protected_message": "Faça login para visualizar os produtos da loja!",
+      "recently_added": "Novos",
+      "best_sellers": "Mais Vendidos",
+      "total": "Total de Cashback",
+      "available_total": "Cashback Disponível",
+      "level": "Nível de Cashback",
+      "invite_code": "Código de Convite",
+      "name": "Nome Completo",
+      "document": "Documento",
+      "birthdate": "Data de Nascimento",
+      "email": "Email",
+      "phone": "Telefone",
+      "password": "Senha",
+      "passwordConfirm": "Confirmar Senha",
+      "date": "Data",
+      "forgot_password": "Recuperar Senha",
+      "title_login": "Entrar",
+      "invite_code_copied": "Código copiado!",
+      "name_placeholder": "Digite seu nome completo",
+      "document_placeholder": "Digite seu documento ou número de ID",
+      "phone_placeholder": "Digite seu número de telefone",
+      "birthdate_placeholder": "Digite sua data de nascimento (MM/DD/AAAA)",
+      "email_placeholder": "Digite seu endereço de email",
+      "status": "Status",
+      "password_placeholder": "Crie uma senha",
+      "passwordConfirm_placeholder": "Confirme sua senha",
+      "account_created_info": "Enviamos um link de confirmação para {email}. Após confirmar sua conta, faça login.",
+      "account": {
+        "please_confirm_email": {
+          "title": "Conta Criada!",
+          "message": "Enviamos um link de confirmação para <email>email</email>. Após confirmar sua conta, faça login."
+        }
+      },
+      "errors": {
+        "EMAIL_ALREADY_REGISTERED": "Este email já está registrado.",
+        "BAD_INVITE_CODE": "O código de convite especificado é inválido."
+      },
+      "last_orders": {
+        "title": "Últimos Pedidos",
+        "items": "Itens",
+        "value": "Valor",
+        "payment": "Pagamento",
+        "actions": "Ações"
+      },
+      "cashback_history": {
+        "title": "Histórico de Cashback",
+        "event": "Evento"
+      },
+      "cashback_events": {
+        "NEW_USER_INVITED_0": "<name>name</name> se cadastrou usando seu link - Nível 1",
+        "NEW_USER_INVITED_1": "<name>name</name> se cadastrou usando um link de indicado - Nível 2",
+        "NEW_USER_INVITED_2": "<name>name</name> se cadastrou usando um link de indicado - Nível 3"
+      }
+    },
+    "RegisterPage": {
+      "title": "Criar Nova Conta"
+    },
+    "LoginPage": {
+      "title": "Entrar"
+    }
+  }
+  

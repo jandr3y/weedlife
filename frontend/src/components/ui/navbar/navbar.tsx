@@ -1,15 +1,17 @@
 "use client"
 import Image from "next/image";
 import NavbarUserMenu from "./navbar-user-menu";
-import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useCart } from "@/store/context/cart";
+import CartButton from "@/components/cart/cart-button";
+import { useTranslations } from "next-intl";
+import { useContext } from "react";
+import UserContext from "@/store/context/user";
+import Button from "../form/button";
 
 const MENU_ITEMS = [
-  { title: 'Loja', href: '/' },
-  { title: 'Sobre', href: '/about' },
-  { title: 'Suporte', href: '/support' }
+  { title: 'store', href: '/' },
+  { title: 'about', href: '/about' },
+  { title: 'support', href: '/support' }
 ]
 
 const getLinkClass = (currentPath: string, href: string) => currentPath === href 
@@ -17,29 +19,8 @@ const getLinkClass = (currentPath: string, href: string) => currentPath === href
   : "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 
 export default function Navbar() {
-
-  const { cart } = useCart()
-  const [displayUserMenu, setDisplayUserMenu] = useState(false)
-
-  const [currentPath, setCurrentPath] = useState("")
-  const router = useRouter()
-  const pathName = usePathname()
-
-  const cartButtonClass = useMemo(() => {
-    return cart.length > 0
-      ? "relative bg-green-400 font-medium uppercase text-sm px-6 py-2 rounded-md cursor-pointer"
-      : "relative bg-green-100 px-6 py-2 rounded-md opacity-90 cursor-pointer"
-  }, [cart.length])
-
-  useEffect(() => {
-    setCurrentPath(pathName)
-  }, [pathName])
-  
-  const onCartClick = () => {
-    if (cart.length > 0) {
-      router.push('/cart')
-    }
-  }
+  const gt = useTranslations('Global')
+  const user = useContext(UserContext)
 
   return (
     <nav className="bg-black py-3">
@@ -70,8 +51,8 @@ export default function Navbar() {
               <div className="flex space-x-4">
                 {
                   MENU_ITEMS.map((item, idx) => (
-                    <Link href={item.href} key={'x'+idx} className={getLinkClass(currentPath, item.href)}>
-                      { item.title }
+                    <Link href={item.href} key={'x'+idx} className={getLinkClass('currentPath', item.href)}>
+                      { gt(item.title) }
                     </Link>
                   ))
                 }
@@ -79,20 +60,19 @@ export default function Navbar() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button type="button" className={cartButtonClass} onClick={onCartClick}>
-                Carrinho ({ cart.length })
-            </button>
+            { user.data && <CartButton /> }
             <div className="relative ml-3">
-              <div>
-                <button type="button" className="relative flex rounded-full bg-gray-800  text-sm focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onClick={() => setDisplayUserMenu(!displayUserMenu)} onBlur={() => setTimeout(() => setDisplayUserMenu(false), 500)}>
-                  <span className="absolute -inset-1.5"></span>
-                  <span className="sr-only">Open user menu</span>
-                  <Image src="/images/users/dev.jpg" className="rounded-full" width={35} height={35} alt="User image" />
-                </button>
-              </div>
-
-              { displayUserMenu && <NavbarUserMenu /> }
+              { user.data && <NavbarUserMenu /> }
             </div>
+            {
+              !user.data && (
+                <Link href="/auth/login">
+                  <Button>
+                    { gt('signin') }
+                  </Button>
+                </Link>
+              )
+            }
           </div>
         </div>
       </div>

@@ -1,0 +1,76 @@
+{
+    "Global": {
+        "hello_name": "Hi, ",
+        "signin": "Sign In",
+        "my_order": "My Orders",
+        "cashback": "Cashback",
+        "my_account": "My Account",
+        "logout": "Logout",
+        "addresses": "Addresses",
+        "cart": "Cart",
+        "create_account": "Create Account",
+        "store": "Store",
+        "about": "About",
+        "save": "Save",
+        "support": "Support",
+        "protected_message": "Please sign in to view store products!",
+        "recently_added": "New",
+        "best_sellers": "Best Sellers",
+        "total": "Total Cashback",
+        "available_total": "Available Cashback",
+        "level": "Cashback Level",
+        "invite_code": "Invite Code",
+        "name": "Full Name",
+        "document": "Document",
+        "birthdate": "Date of Birth",
+        "email": "Email",
+        "phone": "Phone",
+        "password": "Password",
+        "passwordConfirm": "Confirm Password",
+        "date": "Date",
+        "forgot_password": "Recover Password",
+        "title_login": "Sign In",
+        "invite_code_copied": "Invite code copied!",
+        "name_placeholder": "Enter your full name",
+        "document_placeholder": "Enter your document ID or number",
+        "phone_placeholder": "Enter your phone number",
+        "birthdate_placeholder": "Enter your birthdate (MM/DD/YYYY)",
+        "email_placeholder": "Enter your email address",
+        "status": "Status",
+        "password_placeholder": "Create a password",
+        "passwordConfirm_placeholder": "Confirm your password",
+        "account_created_info": "We've sent a confirmation link to {email}. After confirming your account, sign in.",
+        "account": {
+            "please_confirm_email": {
+                "title": "Account Created!",
+                "message": "We've sent a confirmation link to <email>email</email>. After confirming your account, sign in."
+            }
+        },
+        "errors": {
+            "EMAIL_ALREADY_REGISTERED": "This email is already registered.",
+            "BAD_INVITE_CODE": "The specified invite code is invalid."
+        },
+        "last_orders": {
+            "title": "Last Orders",
+            "items": "Items",
+            "value": "Value",
+            "payment": "Payment",
+            "actions": "Actions"
+        },
+        "cashback_history": {
+            "title": "Cashback History",
+            "event": "Event"
+        },
+        "cashback_events": {
+            "NEW_USER_INVITED_0": "<name>name</name> signed up using your link - Level 1",
+            "NEW_USER_INVITED_1": "<name>name</name> signed up using an invited user's link - Level 2",
+            "NEW_USER_INVITED_2": "<name>name</name> signed up using an invited user's link - Level 3"
+        }
+    },
+    "RegisterPage": {
+        "title": "Create New Account"
+    },
+    "LoginPage": {
+        "title": "Sign In"
+    }
+}
