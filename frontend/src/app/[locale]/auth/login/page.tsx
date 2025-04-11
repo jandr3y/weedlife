@@ -26,8 +26,8 @@ export default function LoginPage() {
   const [info, setInfo] = useState<InfoInterface|null>(null);
 
   const { inputAttrs, form, setErrors } = useForm({
-    email: 'wdev.lucas@gmail.com',
-    password: 'Zika1234@'
+    email: '',
+    password: ''
   })
 
   useEffect(() => {
