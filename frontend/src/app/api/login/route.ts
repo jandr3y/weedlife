@@ -1,5 +1,6 @@
 // app/api/login/route.ts
 import { exportJwtPayload } from '@/app/layout';
+import { API_URL } from '@/config';
 import axios from 'axios';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
@@ -8,7 +9,7 @@ export async function POST(req: NextRequest) {
   const { email, password } = await req.json();
 
   try {
-    const { data } = await axios.post('http://localhost:8000/api/auth/login', { email, password })
+    const { data } = await axios.post(`${API_URL}/auth/login`, { email, password })
 
     const res = NextResponse.json({ 
       message: 'Login successful',
